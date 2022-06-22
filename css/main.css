@@ -1,0 +1,82 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: rgb(203, 225, 226);
+}
+
+/*GRID ESTRUCTURA*/
+.grid-content{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 1rem;
+    grid-template-areas : 
+    "header header header header"
+    "aside main main main"
+    "aside section1 section1 section2"
+    "footer footer footer footer"
+}
+header{
+    grid-area: header;
+    border: solid black; 
+    height: 18vh;   
+}
+aside{
+    grid-area: aside;
+    border: solid black;
+    height: 50vh;
+    width: 270px;
+    text-align: center;
+}
+main{
+    grid-area: main;
+    border: solid black;
+}
+
+
+.section1{
+    grid-area: section1;
+    border: solid black;
+}
+.section2{
+    grid-area: section2;
+    border: solid black;
+}
+footer{
+    grid-area: footer;
+    border: solid black;
+}
+
+/* HEADER */
+header{
+    display: flex;
+    flex-direction: column;
+    background-image: url(/img/header.png);
+    background-color: rgb(151, 210, 210);
+    text-align: center;
+    flex-wrap: nowrap;
+}
+header h1{
+    text-transform: uppercase;
+    background-color: rgba(0, 0, 0, 0.636);
+    color: rgb(230, 209, 209);
+    font-family: cursive;
+    
+}
+header nav ul{
+    display: flex;
+    background-color: rgba(0, 0, 0, 0.445);
+    flex-direction: row;
+    list-style: none;
+    justify-content: center;
+    padding: 0.5rem;;
+}
+nav ul li{
+    margin: 0.5rem;
+}
+nav ul li a{
+    text-decoration: none;
+    padding: 1rem;
+}
