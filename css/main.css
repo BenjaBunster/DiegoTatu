@@ -4,35 +4,33 @@
     box-sizing: border-box;
 }
 body{
-    background-color: rgb(203, 225, 226);
+    background-image: url(../img/header.png);
 }
 
 /*GRID ESTRUCTURA*/
 .grid-content{
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
     grid-gap: 1rem;
     grid-template-areas : 
     "header header header header"
     "aside main main main"
-    "aside section1 section1 section2"
+    "aside section1 section2 section3"
     "footer footer footer footer"
 }
 header{
     grid-area: header;
     border: solid black; 
-    height: 18vh;   
 }
 aside{
     grid-area: aside;
     border: solid black;
-    height: 50vh;
-    width: 270px;
-    text-align: center;
 }
 main{
     grid-area: main;
     border: solid black;
+    background-color: rgb(28, 0, 0);
+    color: white;
 }
 
 
@@ -42,6 +40,10 @@ main{
 }
 .section2{
     grid-area: section2;
+    border: solid black;
+}
+.section3{
+    grid-area: section3;
     border: solid black;
 }
 footer{
@@ -80,3 +82,56 @@ nav ul li a{
     text-decoration: none;
     padding: 1rem;
 }
+
+/*ASIDE*/
+.aside{
+    display: inline-block;
+    position: relative;
+    text-align: center;
+    height: 50vh;
+    text-align: center;
+    height: 500px;
+    
+}
+aside img{
+    width: 100%;
+    height: 100%;
+}
+.text-aside{
+    display: flex;
+    flex-direction: column;
+    color: beige;
+    position: absolute;
+    font-size: small;
+    top: 10px;
+    left: 10px;
+}
+
+/*section*/
+.section1 img{
+    width: 100%;
+    height: 100%;
+}
+.section2 img{
+    width: 100%;
+    height: 100%;
+}
+.section3 img{
+    width: 100%;
+    height: 100%;
+}
+
+
+/*-----MQ MOBILE ----- aqui va el css de MOBILE*/
+@media screen and (max-width: 600px) {
+    .grid-content{
+        display: grid;
+        grid-template-columns: 1fr ;
+        grid-gap: 1rem;
+        grid-template-areas : 
+        "header "
+        "main"
+        "aside"
+        "section1"
+        "section2"
+        "footer"
